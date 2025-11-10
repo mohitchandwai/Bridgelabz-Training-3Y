@@ -1,0 +1,1 @@
+Unzip and open index.html in a browser. Replace placeholder images in the images/ folder.

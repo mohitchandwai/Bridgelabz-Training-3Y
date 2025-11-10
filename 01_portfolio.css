@@ -1,0 +1,95 @@
+/* 01_portfolio.css
+   Demonstrates: fixed header, use of px, em, %, vh, rem, and footer sticky/flex layout
+*/
+
+/* Root font-size for rem calculations */
+:root {
+  font-size: 16px; /* 1rem = 16px */
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7dd3fc;
+  --text: #e6f0ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #071021);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed header at top (uses px) */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px; /* px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem; /* rem */
+  background: rgba(2,6,23,0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  z-index: 10;
+}
+
+/* Navigation uses em for spacing */
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1.2em;
+  font-weight: 600;
+}
+
+/* Main content placed below fixed header using padding-top in vh and rem */
+.hero {
+  padding-top: 12vh; /* vh used */
+  padding-bottom: 6vh;
+  flex: 1 0 auto;
+}
+
+/* Intro uses percentage widths */
+.intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+}
+
+/* Profile image uses percentages and rem */
+.profile {
+  width: 28%;
+  max-width: 220px;
+  border-radius: 12px;
+  border: 3px solid rgba(125,211,252,0.12);
+}
+
+/* Bio text uses em and rem */
+.bio h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.4rem 0;
+}
+.bio p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+/* Footer sticks to bottom using flexbox */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background: rgba(2,6,23,0.9);
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
